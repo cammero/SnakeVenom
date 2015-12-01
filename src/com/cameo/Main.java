@@ -8,19 +8,24 @@ public class Main {
     public static void main(String[] args) {
 
         LinkedList<Snake> listOfSnakes = new LinkedList<>();
-        Snake rattlesnake = new Snake("Rattlesnake", 4);
-        Snake seaSnake = new Snake("Sea Snake", 9);
-        Snake greenMamba = new Snake("Green Mamba", 9);
-        Snake cobra = new Snake("Cobra", 5);
-        Snake boaConstrictor = new Snake("Boa Constrictor", 0);
 
+        //Instantiate snake objects and add them to listOfSnakes
+        Snake rattlesnake = new Snake("Rattlesnake", 4);
         listOfSnakes.add(rattlesnake);
+
+        Snake seaSnake = new Snake("Sea Snake", 9);
         listOfSnakes.add(seaSnake);
+
+        Snake greenMamba = new Snake("Green Mamba", 9);
         listOfSnakes.add(greenMamba);
+
+        Snake cobra = new Snake("Cobra", 5);
         listOfSnakes.add(cobra);
+
+        Snake boaConstrictor = new Snake("Boa Constrictor", 0);
         listOfSnakes.add(boaConstrictor);
 
-        System.out.println(listOfSnakes.toString());
+        //Sort list by venomRating, descending
         Collections.sort(listOfSnakes, new SnakeComparator());
         System.out.println(listOfSnakes.toString());
     }
